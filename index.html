@@ -47,6 +47,11 @@
             box-shadow: 0 0 40px #00ffff;
             transform: scale(1.06);
         }
+
+        /* Mobile Optimizations */
+        @media (max-width: 640px) {
+            h1 { font-size: 2.75rem; line-height: 1.1; }
+        }
     </style>
 </head>
 <body class="bg-zinc-950 text-white">
@@ -60,11 +65,11 @@
             </div>
             
             <div class="hidden md:flex items-center gap-x-8 text-sm font-medium">
-                <a href="#about" class="hover:text-cyan-400">About</a>
-                <a href="#skills" class="hover:text-cyan-400">Skills</a>
-                <a href="#learning" class="hover:text-cyan-400">Currently Learning</a>
-                <a href="#projects" class="hover:text-cyan-400">Projects</a>
-                <a href="#contact" class="hover:text-cyan-400">Contact</a>
+                <a href="#about" class="hover:text-cyan-400 transition-colors">About</a>
+                <a href="#skills" class="hover:text-cyan-400 transition-colors">Skills</a>
+                <a href="#learning" class="hover:text-cyan-400 transition-colors">Currently Learning</a>
+                <a href="#projects" class="hover:text-cyan-400 transition-colors">Projects</a>
+                <a href="#contact" class="hover:text-cyan-400 transition-colors">Contact</a>
             </div>
             
             <div class="flex items-center gap-x-5 text-2xl">
@@ -95,20 +100,200 @@
                 </p>
                 
                 <div class="flex flex-col sm:flex-row gap-4">
-                    <a href="#projects" class="glow-btn px-10 py-6 bg-gradient-to-r from-cyan-400 via-pink-500 to-lime-400 text-black font-bold rounded-3xl text-lg flex items-center justify-center gap-x-3 shadow-2xl">
+                    <a href="#projects" 
+                       class="glow-btn px-10 py-6 bg-gradient-to-r from-cyan-400 via-pink-500 to-lime-400 text-black font-bold rounded-3xl text-lg flex items-center justify-center gap-x-3 shadow-2xl">
                         Explore My Work
                         <i class="fa-solid fa-arrow-down"></i>
                     </a>
-                    <a href="#contact" class="glow-btn px-10 py-6 border-2 border-cyan-400 hover:border-lime-400 rounded-3xl text-lg font-medium text-center">
+                    <a href="#contact" 
+                       class="glow-btn px-10 py-6 border-2 border-cyan-400 hover:border-lime-400 rounded-3xl text-lg font-medium text-center">
                         Let's Connect
                     </a>
                 </div>
             </div>
         </div>
+        <div class="absolute bottom-10 right-6 md:right-12 text-[120px] md:text-[180px] opacity-10 neon-cyan pointer-events-none">✦</div>
     </header>
 
-    <!-- ABOUT, SKILLS, LEARNING, PROJECTS, CONTACT sections remain exactly as in the previous version for brevity. 
-    You can copy the full sections from my previous message (ABOUT to CONTACT) and paste them here after the HERO. -->
+    <!-- ABOUT -->
+    <section id="about" class="max-w-7xl mx-auto px-6 py-20 md:py-28 border-t border-white/10">
+        <div class="grid md:grid-cols-12 gap-12 md:gap-16 items-center">
+            <div class="md:col-span-5">
+                <h2 class="text-4xl md:text-5xl font-bold section-header mb-6 neon-pink">Hi, I'm Opeyemi 👋</h2>
+                <p class="text-xl md:text-2xl text-white/80">A passionate Web Developer from Lagos merging technical precision with creative vision while actively building expertise in AI training.</p>
+            </div>
+            <div class="md:col-span-7 text-base md:text-lg leading-relaxed text-white/80">
+                <p class="mb-6">
+                    I craft responsive, high-performance web applications using modern tools and vibrant design systems. 
+                    My focus lies in delivering clean architecture and delightful user experiences.
+                </p>
+                <p>
+                    Simultaneously, I’m sharpening my skills as an aspiring AI Trainer — practicing advanced prompt engineering, systematic response evaluation, and building practical AI-powered interfaces that bridge human insight with machine intelligence.
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <!-- SKILLS -->
+    <section id="skills" class="py-20 md:py-28 bg-gradient-to-b from-black to-zinc-900">
+        <div class="max-w-7xl mx-auto px-6">
+            <h2 class="text-4xl md:text-5xl font-bold section-header text-center mb-12 md:mb-16 neon-lime">Skills & Focus Areas</h2>
+            
+            <div class="grid md:grid-cols-2 gap-8">
+                <div class="glass border border-cyan-400/30 rounded-3xl p-8 md:p-10 project-card">
+                    <div class="flex items-center gap-x-4 mb-8">
+                        <i class="fa-solid fa-code text-5xl neon-cyan"></i>
+                        <h3 class="text-2xl md:text-3xl font-semibold">Web Development</h3>
+                    </div>
+                    <ul class="space-y-5 text-white/80 text-sm md:text-base">
+                        <li class="flex gap-x-4"><i class="fa-solid fa-check text-lime-400 mt-1"></i> HTML, CSS, Tailwind CSS (Advanced)</li>
+                        <li class="flex gap-x-4"><i class="fa-solid fa-check text-lime-400 mt-1"></i> JavaScript, DOM & Event Handling</li>
+                        <li class="flex gap-x-4"><i class="fa-solid fa-check text-lime-400 mt-1"></i> Responsive Design & Performance Optimization</li>
+                        <li class="flex gap-x-4"><i class="fa-solid fa-check text-lime-400 mt-1"></i> Exploring React & Next.js</li>
+                    </ul>
+                </div>
+                
+                <div class="glass border border-pink-400/30 rounded-3xl p-8 md:p-10 project-card">
+                    <div class="flex items-center gap-x-4 mb-8">
+                        <i class="fa-solid fa-brain text-5xl neon-pink"></i>
+                        <h3 class="text-2xl md:text-3xl font-semibold">Aspiring AI Trainer</h3>
+                    </div>
+                    <ul class="space-y-5 text-white/80 text-sm md:text-base">
+                        <li class="flex gap-x-4"><i class="fa-solid fa-check text-lime-400 mt-1"></i> Advanced Prompt Engineering</li>
+                        <li class="flex gap-x-4"><i class="fa-solid fa-check text-lime-400 mt-1"></i> LLM Response Evaluation & Rating</li>
+                        <li class="flex gap-x-4"><i class="fa-solid fa-check text-lime-400 mt-1"></i> Building AI-Integrated Web Tools</li>
+                        <li class="flex gap-x-4"><i class="fa-solid fa-check text-lime-400 mt-1"></i> Preparing for Training Platforms</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CURRENTLY LEARNING -->
+    <section id="learning" class="py-20 md:py-28 bg-black">
+        <div class="max-w-7xl mx-auto px-6">
+            <h2 class="text-4xl md:text-5xl font-bold section-header text-center mb-12 md:mb-16 neon-cyan">Currently Learning</h2>
+            
+            <div class="grid md:grid-cols-3 gap-6 md:gap-8">
+                <div class="glass border border-lime-400/30 rounded-3xl p-8 text-center project-card">
+                    <div class="text-5xl mb-6">⚡</div>
+                    <h3 class="text-xl md:text-2xl font-semibold mb-3 neon-lime">React & Next.js</h3>
+                    <p class="text-white/70 text-sm md:text-base">Building modern, server-rendered applications with Next.js 15, focusing on performance and SEO.</p>
+                    <div class="mt-6 inline-block px-5 py-1 bg-white/10 rounded-3xl text-xs">In Progress</div>
+                </div>
+                
+                <div class="glass border border-pink-400/30 rounded-3xl p-8 text-center project-card">
+                    <div class="text-5xl mb-6">🧠</div>
+                    <h3 class="text-xl md:text-2xl font-semibold mb-3 neon-pink">Prompt Engineering</h3>
+                    <p class="text-white/70 text-sm md:text-base">Mastering chain-of-thought, few-shot, and role-based prompting techniques.</p>
+                    <div class="mt-6 inline-block px-5 py-1 bg-white/10 rounded-3xl text-xs">Daily Practice</div>
+                </div>
+                
+                <div class="glass border border-cyan-400/30 rounded-3xl p-8 text-center project-card">
+                    <div class="text-5xl mb-6">📊</div>
+                    <h3 class="text-xl md:text-2xl font-semibold mb-3 neon-cyan">AI Evaluation & RLHF Basics</h3>
+                    <p class="text-white/70 text-sm md:text-base">Learning structured feedback methods to improve model alignment and safety.</p>
+                    <div class="mt-6 inline-block px-5 py-1 bg-white/10 rounded-3xl text-xs">Active Study</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- PROJECTS -->
+    <section id="projects" class="max-w-7xl mx-auto px-6 py-20 md:py-28 border-t border-white/10">
+        <h2 class="text-4xl md:text-5xl font-bold section-header text-center mb-6 neon-lime">Featured Projects</h2>
+        <p class="text-center text-white/70 max-w-md mx-auto mb-12 md:mb-16 text-sm md:text-base">Detailed work that blends strong web development with growing AI training practice.</p>
+        
+        <div class="grid md:grid-cols-2 gap-8">
+            <div class="glass border border-cyan-400/30 rounded-3xl p-8 md:p-10 project-card">
+                <div class="uppercase text-cyan-400 text-xs tracking-widest mb-4">Web Development • Personal Brand</div>
+                <h3 class="text-2xl md:text-3xl font-semibold mb-6">This Portfolio Website</h3>
+                <p class="text-white/80 mb-8 leading-relaxed text-sm md:text-base">
+                    A vibrant, single-page portfolio built from scratch showcasing my dual journey. 
+                    Features advanced Tailwind techniques, neon gradients, glassmorphism, smooth hover animations, and responsive design.
+                </p>
+                <div class="flex flex-wrap gap-3">
+                    <span class="text-xs px-5 py-2 bg-white/10 rounded-3xl">HTML</span>
+                    <span class="text-xs px-5 py-2 bg-white/10 rounded-3xl">Tailwind CSS</span>
+                    <span class="text-xs px-5 py-2 bg-white/10 rounded-3xl">JavaScript</span>
+                </div>
+            </div>
+            
+            <div class="glass border border-pink-400/30 rounded-3xl p-8 md:p-10 project-card">
+                <div class="uppercase text-pink-400 text-xs tracking-widest mb-4">AI + Web • In Progress</div>
+                <h3 class="text-2xl md:text-3xl font-semibold mb-6">AI Prompt Tester & Evaluator Dashboard</h3>
+                <p class="text-white/80 mb-8 leading-relaxed text-sm md:text-base">
+                    Interactive dashboard that sends prompts to multiple LLMs, displays side-by-side comparisons, 
+                    and includes structured rating system. Built to develop critical AI training evaluation skills.
+                </p>
+                <div class="flex flex-wrap gap-3">
+                    <span class="text-xs px-5 py-2 bg-white/10 rounded-3xl">JavaScript</span>
+                    <span class="text-xs px-5 py-2 bg-white/10 rounded-3xl">AI API</span>
+                    <span class="text-xs px-5 py-2 bg-white/10 rounded-3xl">Tailwind CSS</span>
+                </div>
+            </div>
+            
+            <div class="glass border border-lime-400/30 rounded-3xl p-8 md:p-10 project-card">
+                <div class="uppercase text-lime-400 text-xs tracking-widest mb-4">Web Development • Productivity</div>
+                <h3 class="text-2xl md:text-3xl font-semibold mb-6">Dynamic Task Management Dashboard</h3>
+                <p class="text-white/80 mb-8 leading-relaxed text-sm md:text-base">
+                    Feature-rich task manager with drag-and-drop, priority colours, due dates, search, and local storage. 
+                    Vibrant UI designed to make productivity engaging.
+                </p>
+                <div class="flex flex-wrap gap-3">
+                    <span class="text-xs px-5 py-2 bg-white/10 rounded-3xl">HTML • CSS</span>
+                    <span class="text-xs px-5 py-2 bg-white/10 rounded-3xl">JavaScript</span>
+                </div>
+            </div>
+            
+            <div class="glass border border-purple-400/30 rounded-3xl p-8 md:p-10 project-card">
+                <div class="uppercase text-purple-400 text-xs tracking-widest mb-4">AI Experiment • Interface</div>
+                <h3 class="text-2xl md:text-3xl font-semibold mb-6">Custom AI Chat Playground</h3>
+                <p class="text-white/80 mb-8 leading-relaxed text-sm md:text-base">
+                    Animated chat interface connected to AI APIs with system prompt experimentation and real-time response rating. 
+                    Built to understand prompt quality impact on model behaviour.
+                </p>
+                <div class="flex flex-wrap gap-3">
+                    <span class="text-xs px-5 py-2 bg-white/10 rounded-3xl">JavaScript</span>
+                    <span class="text-xs px-5 py-2 bg-white/10 rounded-3xl">Fetch API</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CONTACT -->
+    <section id="contact" class="py-20 md:py-28 bg-gradient-to-b from-black to-zinc-950 border-t border-white/10">
+        <div class="max-w-2xl mx-auto px-6 text-center">
+            <h2 class="text-4xl md:text-5xl font-bold section-header mb-8 neon-cyan">Ready to collaborate?</h2>
+            <p class="text-lg md:text-xl text-white/80 mb-12">
+                Looking for a motivated Web Developer or an eager contributor for AI training tasks? 
+                Let’s build something impactful together.
+            </p>
+            
+            <div class="flex flex-col sm:flex-row gap-4 justify-center">
+                <a href="mailto:ibukune133@gmail.com" 
+                   class="glow-btn px-12 py-6 bg-gradient-to-r from-cyan-400 via-pink-500 to-lime-400 text-black font-bold rounded-3xl text-lg flex items-center justify-center gap-x-3">
+                    Email Me
+                    <i class="fa-solid fa-envelope"></i>
+                </a>
+                <a href="tel:08129470627" 
+                   class="glow-btn px-12 py-6 border-2 border-lime-400 hover:bg-lime-400 hover:text-black rounded-3xl text-lg font-medium">
+                    Call: 0812 947 0627
+                </a>
+            </div>
+            
+            <div class="mt-16 flex justify-center gap-x-8 text-3xl">
+                <a href="https://github.com" target="_blank" class="neon-cyan hover:scale-125 transition-transform"><i class="fa-brands fa-github"></i></a>
+                <a href="https://linkedin.com" target="_blank" class="neon-pink hover:scale-125 transition-transform"><i class="fa-brands fa-linkedin"></i></a>
+                <a href="https://twitter.com" target="_blank" class="neon-lime hover:scale-125 transition-transform"><i class="fa-brands fa-x-twitter"></i></a>
+            </div>
+            
+            <div class="mt-10 text-white/60 text-sm">
+                Opeyemi Emmanuel • Lagos, Nigeria<br>
+                ibukune133@gmail.com • 0812 947 0627
+            </div>
+        </div>
+    </section>
 
     <script>
         tailwind.config = {
